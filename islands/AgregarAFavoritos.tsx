@@ -8,7 +8,6 @@ const AgregarAFavoritos: FunctionalComponent = () => {
     const [repetida, setRepetida] = useState<boolean>(false)
     
     const comprobarPelicula = () => {
-
         const peliRepetida = Favoritos.value.some(e => e === pelicula)
         setRepetida(peliRepetida)
         if(!peliRepetida) Favoritos.value = [...Favoritos.value, pelicula]
