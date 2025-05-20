@@ -5,6 +5,7 @@ const ListaFavoritos: FunctionalComponent = () => {
 
 
     const dropEntry = (value: string) => {
+        console.log(Favoritos.value);
         const idx = Favoritos.value.indexOf(value);
         Favoritos.value.splice(idx, 1);
         console.log(Favoritos.value);
@@ -21,7 +22,7 @@ const ListaFavoritos: FunctionalComponent = () => {
     }
     return (
         <div>
-            {Favoritos.value?.map(e => {return (<a>{e}</a> <svg src=""/>)})}
+            {Favoritos.value?.map(e => {return (<><a>{e}</a><img height="30" src="trash.svg" onClick={() => dropEntry(e)}/></>)})}
             {/* {Favoritos.value?.map(e => <a>{e}</a>)} */}
         </div>
     )
