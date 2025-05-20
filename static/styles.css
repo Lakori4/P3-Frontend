@@ -16,14 +16,21 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 10%;
+    flex-direction: column;
+    padding-top: 5%;
+    button {
+        margin: 10px;
+    }
+    h3 {
+        color: red;
+    }
 }
 
 .list {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 10%;
+    padding-top: 5%;
     flex-direction: column;
 }
 
@@ -31,4 +38,5 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 5px;
 }
