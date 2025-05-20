@@ -21,8 +21,8 @@ const ListaFavoritos: FunctionalComponent = () => {
     }
     return (
         <div>
-            {/* {Favoritos.value?.map(e => <a onClick={dropEntry(e)}>{e}</a>)} */}
-             {Favoritos.value?.map(e => <a>{e}</a>)}
+            {Favoritos.value?.map(e => {return (<a>{e}</a> <svg src=""/>)})}
+            {/* {Favoritos.value?.map(e => <a>{e}</a>)} */}
         </div>
     )
 }
