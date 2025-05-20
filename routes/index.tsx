@@ -3,7 +3,7 @@ import ListaFavoritos from "../islands/ListaFavoritos.tsx";
 
 export default function Home() {
   return (
-    <div>
+    <div class="index">
       <AgregarAFavoritos/>
       <ListaFavoritos/>
     </div>

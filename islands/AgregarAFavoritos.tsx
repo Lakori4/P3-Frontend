@@ -8,13 +8,13 @@ const AgregarAFavoritos: FunctionalComponent = () => {
     const [repetida, setRepetida] = useState<boolean>(false)
     
     const comprobarPelicula = () => {
-        const peliRepetida = Favoritos.value.some(e => e === pelicula)
+        const peliRepetida = Favoritos.value.some(e => e.toLocaleLowerCase() === pelicula.toLocaleLowerCase())
         setRepetida(peliRepetida)
         if(!peliRepetida) Favoritos.value = [...Favoritos.value, pelicula]
     }
 
     return (
-        <div>
+        <div class="add">
             <input type="text" onBlur={(e) => setPelicula(e.currentTarget.value)}/>
             <button type="button" onClick={() => comprobarPelicula()}>Agregar a favoritos</button>
             {repetida && <h3>Ya has agregado esa película</h3>}
